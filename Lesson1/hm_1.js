@@ -1,4 +1,5 @@
-< script >
-    age = prompt("Please tell me your age:");
-console.log(age); <
-/script>
+a = ("Hello World! It's JavaScript !")
+console.log(a);
+
+b = alert(a)
+console.log(bhi);
