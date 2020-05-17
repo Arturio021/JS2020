@@ -39,3 +39,38 @@ button.addEventListener("click", function() {
 });
 
 /2.Создать объект со значениями температуры в стране. Реализовать код, который выведет среднее значение всех стран. /;
+var term = {
+    Canada: 10,
+    Germany: 13,
+    Spain: 22,
+    Belarus: 14,
+    Ukraine: 17,
+    Poland: 9,
+};
+sum = 0;
+for (var i of Object.values(term)) {
+    sum += i / 2;
+}
+console.log("Средняя температура равна", sum, "градусам");
+// for (var key in term) {
+//     for (var i = 0; i < term[key]; i++) sum += i;
+//     console.log(sum);
+// }
+
+// var answer =
+//     term.Belarus +
+//     term.Canada +
+//     term.Germany +
+//     term.Poland +
+//     term.Spain +
+//     term.Ukraine;
+// console.log(answer);
+// function average() {
+//     var sum = 0;
+
+//     for (var i = 0; i < arguments[i]; i++) sum += arguments[i];
+
+//     return sum == 0 ? sum : sum / arguments.length;
+// }
+
+// alert(average(1, 2, 3, 4, 5, 6, 7, 8, 9));
