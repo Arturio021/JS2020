@@ -52,6 +52,25 @@ for (var i of Object.values(term)) {
     sum += i / 2;
 }
 console.log("Средняя температура равна", sum, "градусам");
+
+/3. Создать функцию, которая принимает в качестве параметра объект term с температурами и возвращает максимальную температуру./;
+
+function getMax() {
+    for (key in term) {
+        var maxValue = term[key];
+
+        console.log("Максимальная температура равна ", maxValue);
+    }
+}
+getMax();
+
+// function getMax() {
+//     for (var key in term) {
+//         var anw = Math.max.apply(null, term[key]);
+//     }
+// }
+// getMax();
+
 // for (var key in term) {
 //     for (var i = 0; i < term[key]; i++) sum += i;
 //     console.log(sum);
