@@ -4,12 +4,12 @@
 //             menuButton.classList.toggle('menu-button-active');
 //             menu.classList.toggle('header-active');
 //
-/Переход по ссылке/;
+//Переход по ссылке/;
 document.querySelector(".new").onclick = function() {
     window.location.href = "https://www.google.ru/";
 };
 
-/Смена стиля/;
+//Смена стиля/;
 var changeStyle = document.getElementsByClassName("second_button")[0];
 var box = document.querySelector("body");
 var title = document.querySelector("header");
@@ -23,7 +23,7 @@ function newStyle() {
 }
 changeStyle.addEventListener("click", newStyle);
 
-/Удаление контента и отрисовка макета /;
+//Удаление контента и отрисовка макета /;
 
 var button = document.querySelector("#third_button");
 var parent = document.querySelector("#section_1");
@@ -38,31 +38,38 @@ button.addEventListener("click", function() {
     box.classList.add("body");
 });
 
-/2.Создать объект со значениями температуры в стране. Реализовать код, который выведет среднее значение всех стран. /;
+//2.Создать объект со значениями температуры в стране. Реализовать код, который выведет среднее значение всех стран. /;
 var term = {
     Canada: 10,
     Germany: 13,
     Spain: 22,
-    Belarus: 14,
+    Belarus: 44,
     Ukraine: 17,
-    Poland: 9,
+    Poland: 10,
+    Uk: 12,
 };
-sum = 0;
+
+var sum = 0;
+var counter = 0;
 for (var i of Object.values(term)) {
-    sum += i / 2;
+    sum += i;
+    counter++;
 }
-console.log("Средняя температура равна", sum, "градусам");
+console.log("Средняя температура равна", sum / counter, "градусам");
+console.log("Сколько раз работает счётчик: ", counter);
 
-/3. Создать функцию, которая принимает в качестве параметра объект term с температурами и возвращает максимальную температуру./;
+//3. Создать функцию, которая принимает в качестве параметра объект term с температурами и возвращает максимальную температуру./;
+var maxValue = 0;
 
-function getMax() {
-    for (key in term) {
-        var maxValue = term[key];
-
-        console.log("Максимальная температура равна ", maxValue);
+function getMax(Mv) {
+    for (key in Mv) {
+        if (maxValue < Mv[key]) {
+            maxValue = Mv[key];
+        }
     }
+    console.log("Максимальная температура равна ", maxValue);
 }
-getMax();
+getMax(term);
 
 // function getMax() {
 //     for (var key in term) {
