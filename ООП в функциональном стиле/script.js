@@ -17,12 +17,11 @@ function Laptop(
     this.mass = mass;
     this.haveDisk = haveDisk;
     this.getRamSize = function() {
-        return this.ramSize
-    }
+        return this.ramSize;
+    };
     this.getRomSize = function() {
-        return this.romSize
-    }
-
+        return this.romSize;
+    };
 }
 
 function Ultrabook(
@@ -33,7 +32,8 @@ function Ultrabook(
     ramSize,
     romSize,
     mass,
-    haveDisk) {
+    haveDisk
+) {
     this.name = name;
     this.model = model;
     this.serialNumber = serialNumber;
@@ -44,52 +44,59 @@ function Ultrabook(
     this.haveDisk = haveDisk;
 
     this.getRamSize = function() {
-        return this.ramSize
-    }
+        return this.ramSize;
+    };
     this.name = function() {
-        return this.name
-    }
+        return this.name;
+    };
 
     this.yearOfManufacture = function() {
-        return this.yearOfManufacture
-    }
-
+        return this.yearOfManufacture;
+    };
 }
 
-
-
-
-function AsusTufGaming(name,
+function AsusTufGaming(
+    name,
     model,
     serialNumber,
     yearOfManufacture,
     ramSize,
     romSize,
     mass,
-    haveDisk) {
-    Laptop.call(this, name,
+    haveDisk
+) {
+    Laptop.call(
+        this,
+        name,
         model,
         serialNumber,
         yearOfManufacture,
         ramSize,
         romSize,
         mass,
-        haveDisk)
+        haveDisk
+    );
     if (this.mass > 1500) {
-        console.log('Это ноутбук');
-
+        console.log("Это ноутбук");
     } else {
-        console.log('Это ультрабук');
-
+        console.log("Это ультрабук");
     }
-
-
-
 }
 
-var laptopAsus = new AsusTufGaming('ASUS', 'TUF Gaming', 12345, 2018, '12 ГБ', 'Объем HDD - 1T', 2000, 'нет')
+var laptopAsus = new AsusTufGaming(
+    "ASUS",
+    "TUF Gaming",
+    12345,
+    2018,
+    "12 ГБ",
+    "Объем HDD - 1T",
+    2000,
+    "нет"
+);
 console.log("размер ОЗУ ноутбука Asus - ", laptopAsus.getRamSize());
 console.log("размер ПЗУ ноутбука Asus - ", laptopAsus.getRomSize());
+console.log("Название   - ", laptopAsus.name);
+console.log(laptopAsus);
 
 function AsusZenBook(
     name,
@@ -99,35 +106,41 @@ function AsusZenBook(
     ramSize,
     romSize,
     mass,
-    haveDisk) {
-    Laptop.call(this, name,
+    haveDisk
+) {
+    Laptop.call(
+        this,
+        name,
         model,
         serialNumber,
         yearOfManufacture,
         ramSize,
         romSize,
         mass,
-        haveDisk);
+        haveDisk
+    );
     if (this.mass > 1500) {
-        console.log('Это ноутбук');
-
+        console.log("Это ноутбук");
     } else {
-        console.log('Это ультрабук');
-
+        console.log("Это ультрабук");
     }
-
 }
 
-var UltrabookAsus = new AsusZenBook('ASUS', 'ZenBook', 4321, 2019, '16 ГБ', 'Объем SSD - 512 ГБ', 1300, 'нет')
+var UltrabookAsus = new AsusZenBook(
+    "ASUS",
+    "ZenBook",
+    4321,
+    2019,
+    "16 ГБ",
+    "Объем SSD - 512 ГБ",
+    1300,
+    "нет"
+);
 console.log("размер ОЗУ ультрабука Asus - ", UltrabookAsus.getRamSize());
+console.log("размер ОЗУ ультрабука Asus - ", UltrabookAsus.getRomSize());
 console.log("Год создания ультрабука Asus - ", UltrabookAsus.yearOfManufacture);
-console.log('Название ультрабука  - ', UltrabookAsus.name);
-
-
-
-
-
-
+console.log("Название ультрабука  - ", UltrabookAsus.name);
+console.log(UltrabookAsus);
 
 // function getRamSize() {
 //     return this.ramSize;
