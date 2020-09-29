@@ -1,6 +1,5 @@
 document.querySelector("#Laptop").addEventListener("submit", function(event) {
     var title = document.querySelector("#title").value;
-    var title = document.querySelector("#title").value;
     var ramSize = document.querySelector("#ram").value;
     var year = document.querySelector("#year").value;
     var proccesor = document.querySelector("#proccesor").value;
@@ -17,6 +16,7 @@ document.querySelector("#Laptop").addEventListener("submit", function(event) {
         caseMaterial,
         mass
     );
+
     var viewLaptop = new ViewLaptop();
 
     if (
@@ -29,8 +29,6 @@ document.querySelector("#Laptop").addEventListener("submit", function(event) {
         mass === ""
     ) {
         viewLaptop.getMessage("Заполните все поля ввода", "no_succes");
-    } else if (mass > 3) {
-        viewLaptop.getMessage("Вес должен быть меньше 3-х кг", "no_succes");
     } else {
         viewLaptop.addLaptop(laptop);
         viewLaptop.getMessage("Новый ноутбук добавлен", "succes");

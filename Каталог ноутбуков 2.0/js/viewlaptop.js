@@ -20,12 +20,12 @@ ViewLaptop.prototype.addProduct = function(obj) {
         "</li>" +
         `<li><button class="info">Инфо</button>` +
         '<button id="delete">Удалить</button></li>';
-    ullist.querySelector(".info").addEventListener("click", function() {
-        myWindow = window
-            .open("about:blank", "", "width=200,height=200")
+    // ullist.querySelector(".info").addEventListener("click", function() {
+    //     myWindow = window
+    //         .open("about:blank", "", "width=200,height=200")
 
-        .document.write(`<h1>${obj.toString()}</h1>`);
-    });
+    //     .document.write(`<h1>${obj.toString()}</h1>`);
+    // });
     block.appendChild(ullist);
 };
 
@@ -40,8 +40,12 @@ ViewLaptop.prototype.getMessage = function(message, nameCl) {
     cont.insertBefore(infoBlock, form);
 };
 
-ViewLaptop.prototype.clearinput = function() {
+ViewLaptop.prototype.clearInput = function() {
     document.querySelector("#title").value = "";
     document.querySelector("#ram").value = "";
     document.querySelector("#year").value = "";
+    document.querySelector("#proccesor").value = "";
+    document.querySelector("#countCore").value = "";
+    document.querySelector("#material").value = "";
+    document.querySelector("#mass").value = "";
 };
