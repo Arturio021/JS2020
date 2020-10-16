@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(-60deg, #ff9768 0%, #9156e1 100%);
+}
+
+.calculator {
+    margin: 90px auto;
+    width: 368px;
+    height: 700px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.75);
+}
+
+.header {
+    height: 100px;
+    padding: 37px 27px 29px 29px;
+    text-align: right;
+    background-color: black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.input-display {
+    width: 100%;
+    /* Устанавливает прозрачный фон. border: none; */
+    background: transparent;
+    /* устанавливает цвет, стиль и толщину внешней границы на всех четырех сторонах элемента */
+    outline: none;
+    border: none;
+    font-size: 18px;
+    text-align: right;
+    color: #d98192;
+}
+
+.input-display::placeholder {
+    color: #d98192;
+}
+
+.output-display {
+    width: 100%;
+    margin-top: 20px;
+    background: transparent;
+    outline: none;
+    border: none;
+    text-align: right;
+    font-size: 58px;
+    color: white;
+}
+
+.output-display::placeholder {
+    color: white;
+}
+
+.main {
+    height: 500px;
+    /* элемент является блочной таблицей */
+    display: table;
+}
+
+.btn {
+    border: none;
+    font-size: 22px;
+    height: 92px;
+    width: 92px;
+    padding: 39px;
+    border-image: linear-gradient(to right, #f7f7f7 0%, #f1f1f1 100%);
+    color: black;
+    outline: none;
+}
+
+.btn:nth-child(17) {
+    border-bottom-left-radius: 5px;
+}
+
+#result {
+    width: 368px;
+    height: 92px;
+    padding: 39px;
+    font-size: 22px;
+    background-color: #e62f89;
+    outline: none;
+    border: none;
+    color: white;
+    border-bottom-right-radius: 5px;
+}
+
+.btn-operation {
+    color: white;
+    font-size: 22px;
+    border-image: none;
+    background-color: #9156e1;
+}
+
+.btn:hover,
+.btn-indigo:hover,
+.btn-big:hover {
+    filter: brightness(85%);
+}

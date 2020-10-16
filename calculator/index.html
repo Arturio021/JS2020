@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/627239aa3c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <title>calculator</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="header">
+            <input disabled type="text" placeholder="0,00" class="input-display" id="input-display" readonly />
+            <input disabled type="text" placeholder="0,00" class="output-display" id="output-display" readonly />
+        </div>
+        <div class="main">
+            <button class="btn btn-operation" id="perCent">%</button>
+            <button class="clear-btn btn" id="c">C</button>
+            <button class="clear-btn btn">
+          <i class="fas fa-backspace" id="clean"></i>
+        </button>
+            <button class="btn btn-operation">/</button>
+
+            <button class="number btn">7</button>
+            <button class="number btn">8</button>
+            <button class="number btn">9</button>
+
+            <button class="btn btn-operation">sqrt</button>
+            <button class="number btn">4</button>
+            <button class="number btn">5</button>
+            <button class="number btn">6</button>
+            <button class="btn btn-operation">-</button>
+            <button class="number btn">1</button>
+            <button class="number btn">2</button>
+            <button class="number btn">3</button>
+            <button class="btn btn-operation">+</button>
+            <button class="number btn">0</button>
+            <button class="btn" id="dot">.</button>
+            <button class="btn btn-operation">*</button>
+            <button class="degree btn btn-operation">^</button>
+            <button class="btn-big btn-operation" id="result">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

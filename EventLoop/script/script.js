@@ -4,7 +4,7 @@ function outputNumbers(one, two) {
         console.log(num);
         if (num !== one) setTimeout(time, 1000);
         num--;
-    }, 1000);
+    }, 5000);
 }
 outputNumbers(1, 14);
 
